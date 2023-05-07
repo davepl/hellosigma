@@ -18,8 +18,6 @@ void loop()
     CHSV hsv(initialHue, 255, 240);
     for (int i = 0; i < NUM_LEDS; i++)
     {
-        CRGB rgb;
-        hsv2rgb_rainbow(hsv, rgb);
         leds[i] = hsv;
         hsv.hue += (256/NUM_LEDS);
     }
